@@ -1,0 +1,39 @@
+name: Deploy SAM Application
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-region: eu-west-1
+
+      - name: Install SAM CLI
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y unzip
+          curl "https://s3.amazonaws.com/aws-sam-cli/latest/aws-sam-cli-linux-x86_64.zip" -o "samcli.zip"
+          unzip samcli.zip -d sam installation
+          sudo ./sam-installation/install
+
+      - name: Build the application
+        run: sam build
+
+      - name: Deploy the SAM application
+        run: |
+          sam deploy --stack-name sam-lambda-kn-12 \
+                     --region eu-west-1 \
+                     --capabilities CAPABILITY_IAM \
+                     --no-confirm-changeset
