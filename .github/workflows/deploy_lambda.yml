@@ -21,7 +21,7 @@ jobs:
           aws-region: eu-west-1
 
       - name: Install SAM CLI
-        uses: aws-actions/aws-sam-cli-action@v1.0.0
+        uses: aws-actions/setup-sam@v2
 
       - name: Build the application
         run: sam build
