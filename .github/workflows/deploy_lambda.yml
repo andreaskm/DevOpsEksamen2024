@@ -25,6 +25,7 @@ jobs:
 
       - name: Build the application
         run: sam build
+        working-directory: .sam_lambda/sam_lambda_kn_12
 
       - name: Deploy the SAM application
         run: |
