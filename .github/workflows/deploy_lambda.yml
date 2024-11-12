@@ -21,12 +21,7 @@ jobs:
           aws-region: eu-west-1
 
       - name: Install SAM CLI
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y unzip
-          curl "https://s3.amazonaws.com/aws-sam-cli/latest/aws-sam-cli-linux-x86_64.zip" -o "samcli.zip"
-          unzip samcli.zip -d sam installation
-          sudo ./sam-installation/install
+        uses: aws-actions/aws-sam-cli-action@v1.0.0
 
       - name: Build the application
         run: sam build
