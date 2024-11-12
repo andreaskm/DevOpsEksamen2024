@@ -38,3 +38,4 @@ jobs:
                      --region eu-west-1 \
                      --capabilities CAPABILITY_IAM \
                      --no-confirm-changeset
+        working-directory: sam_lambda/sam_lambda_kn_12
