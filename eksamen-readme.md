@@ -6,7 +6,7 @@
     * ![img.png](images/img2.png)
 * Oppgave 2
     * Lenke til kjørt workflow i main: https://github.com/andreaskm/DevOpsEksamen2024/actions/runs/11817917899/job/32924343548
-    * ![img.png](images/img4.png)
+    * ![img.png](images/img4.png)1
     * 2
     * SQS-Kø URL: https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-12
     * ![img.png](images/img3.png)
