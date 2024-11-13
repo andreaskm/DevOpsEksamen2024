@@ -1,6 +1,7 @@
 .idea
 .venv
 .c9
+target/
 **/.DS_Store
 # Local .terraform directories
 **/.terraform/*
