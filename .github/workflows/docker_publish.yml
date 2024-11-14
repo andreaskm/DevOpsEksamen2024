@@ -22,7 +22,7 @@ jobs:
         id: build-docker-image
         run: |
           ls -la
-          docker build . -f Dockerfile -t $username/imagegenerator12
+          docker build . -f Dockerfile -t andreaskroger/imagegenerator12
         working-directory: ./java_sqs_client
       - name: push the docker image
         id: push-docker-image
