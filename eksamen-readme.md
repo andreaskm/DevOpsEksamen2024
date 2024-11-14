@@ -23,3 +23,8 @@
     * 2
     * 3
     * 4
+
+# docker
+docker build . -t imagegenerator12 (12 for kandidatnummer)
+docker tag imagegenerator12 andreaskroger/imagegenerator12
+docker push andreaskroger/imagegenerator12
