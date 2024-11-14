@@ -17,10 +17,7 @@
     * Jeg valgte taggestrategien andreaskroger/imagegenerator12 for å assosiere imaget mitt med både prosjektet (imagegenerator12) og min Dockerhub-konto (andreaskroger). Det sørger for at docker imaget er unikt identifiserbart på dockerhub. Ved versjonering ville det vært nyttig å gi imaget en tag som f.eks. 1.0.0 for å tydeliggjøre små og store endringer. Dette vil gi en tydelig versjonskontroll.
     * Container image + SQS Url: andreaskroger/imagegenerator12 + https://sqs.eu-west-1.amazonaws.com/244530008913/image-generation-queue-12
 * # Oppgave 4
-    * 1
-    * 2
-    * 3
-    * 4
+    * ![img.png](images/img6.png)
 
 # docker
 docker build . -t imagegenerator12 (12 for kandidatnummer)

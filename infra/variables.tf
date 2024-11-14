@@ -9,3 +9,18 @@ variable "sqs_queue_name" {
   type = string
   default = "image-generation-queue-12"
 }
+
+variable "threshold" {
+  default = "300" # Five minutes should not give us any bad reviews on the app store
+  type = string
+}
+
+variable "alarm_email" {
+  default = "andreas.km12@gmail.com"
+  type = string
+}
+
+variable "prefix" {
+  default = "kn-12"
+  type = string
+}
