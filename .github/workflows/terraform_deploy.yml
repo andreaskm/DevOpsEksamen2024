@@ -34,11 +34,12 @@ jobs:
         run: terraform validate
         working-directory: infra
 
+        # Hvis pushet ikke er til main vil den kun kjøre terraform plan
       - name: Terraform plan
         if: github.ref != 'refs/heads/main'
         run: terraform plan
         working-directory: infra
-
+        # Dersom pushet er til main, vil den kjøre terraform apply --auto-approve for at den ikke skal ta imot en 'yes' fra bruker
       - name: Terraform Apply
         if: github.ref == 'refs/heads/main'
         run: terraform apply --auto-approve

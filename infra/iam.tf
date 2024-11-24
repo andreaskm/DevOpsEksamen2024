@@ -49,6 +49,8 @@ resource "aws_iam_role_policy" "lambda_policy" {
         Resource = "arn:aws:logs:*:*:*"
       },
       {
+        # Måtte ha med denne for at sqs skulle kunne gå til bedrock for å sende meldinger
+        # uten den ble det bare en lang kø med meldinger i sqs
         Action = [
           "bedrock:InvokeModel"
         ]
